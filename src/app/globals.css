@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-white text-primary font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply w-full h-12 rounded-xl bg-accent text-white font-medium text-base
+           hover:bg-accent-hover active:scale-[0.98] transition-all duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100;
+  }
+
+  .btn-secondary {
+    @apply h-10 px-4 rounded-xl border border-gray-200 bg-white text-primary font-medium text-sm
+           hover:bg-gray-50 active:scale-[0.98] transition-all duration-150;
+  }
+
+  .input-field {
+    @apply w-full h-12 px-4 rounded-xl border border-gray-200 bg-white text-sm
+           placeholder:text-gray-400
+           focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium
+           border transition-all duration-150 cursor-pointer select-none;
+  }
+
+  .chip-active {
+    @apply bg-accent/10 border-accent/30 text-accent;
+  }
+
+  .chip-inactive {
+    @apply bg-gray-50 border-gray-200 text-gray-600 hover:border-gray-300;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #e5e7eb transparent;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
