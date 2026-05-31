@@ -1,8 +1,8 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/confirmed/[orderId]/page": "app/confirmed/[orderId]/page.js",
-  "/model/[code]/page": "app/model/[code]/page.js",
-  "/chat/[threadId]/page": "app/chat/[threadId]/page.js",
-  "/order/[code]/page": "app/order/[code]/page.js",
+  "/confirmed/page": "app/confirmed/page.js",
+  "/chat/page": "app/chat/page.js",
+  "/model/page": "app/model/page.js",
+  "/order/page": "app/order/page.js",
   "/page": "app/page.js"
 }
